@@ -96,6 +96,6 @@ buildkonfig {
         // local.propertiesのapi_keyに定義されている値を読み込む
         val YAHOO_API_KEY = properties.getProperty("yahoo_api_key")
         // ついでにbuildConfigFieldに定義
-        buildConfigField(STRING, "YAHOO_API_KEY", "\"${YAHOO_API_KEY}\"")
+        buildConfigField(STRING, "YAHOO_API_KEY", YAHOO_API_KEY)
     }
 }
