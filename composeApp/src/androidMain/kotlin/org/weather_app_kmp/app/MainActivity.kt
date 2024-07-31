@@ -1,11 +1,9 @@
 package org.weather_app_kmp.app
 
-import App
+import RocketLaunchView
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
 import appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -20,13 +18,7 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            App()
+            RocketLaunchView()
         }
     }
-}
-
-@Preview
-@Composable
-fun AppAndroidPreview() {
-    App()
 }
