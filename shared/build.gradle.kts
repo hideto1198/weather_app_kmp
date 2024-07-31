@@ -82,7 +82,7 @@ android {
 sqldelight {
     databases {
         create("AppDatabase") {
-            packageName.set("com.jetbrains.spacetutorial.cache")
+            packageName.set("cache")
         }
     }
 }

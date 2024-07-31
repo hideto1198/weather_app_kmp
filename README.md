@@ -7,3 +7,10 @@
 ```
 ./gradlew generateBuildKonfig
 ```
+
+## TIPS
+### SQLDelgiht
+#### データベース自動生成
+```
+./gradlew generateCommonMainAppDatabaseInterface
+```
