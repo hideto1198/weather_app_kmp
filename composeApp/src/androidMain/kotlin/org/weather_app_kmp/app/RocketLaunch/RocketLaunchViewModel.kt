@@ -12,11 +12,12 @@ import java.lang.Exception
 class RocketLaunchViewModel(
     private val sdk: SpaceXSDK
 ) : ViewModel() {
+    private val _state = mutableStateOf(RocketLaunchScreenState())
+    val state: State<RocketLaunchScreenState> = _state
+
     init {
         loadLaunches()
     }
-    private val _state = mutableStateOf(RocketLaunchScreenState())
-    val state: State<RocketLaunchScreenState> = _state
     
     fun loadLaunches() {
         viewModelScope.launch {
@@ -25,7 +26,7 @@ class RocketLaunchViewModel(
                 val launches = sdk.getLaunches(forceReload = true)
                 _state.value = _state.value.copy(isLoading = false, launches = launches)
             } catch (e: Exception) {
-                _state.value = _state.value.copy(isLoading = false)
+                _state.value = _state.value.copy(isLoading = false, launches = emptyList())
             }
         }
     }
