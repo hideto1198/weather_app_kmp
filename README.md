@@ -1,5 +1,9 @@
 # Yahoo天気APIを使用した天気アプリ
 
-## 前書き
-- local.propertiesにYahooAPIのAPI_KEYをセットしてください
+## 初めに
+- local.propertiesにYahooAPIの`YAHOO_API_KEY`をセットしてください
 > yahoo_api_key=/* API_KEY */
+- API_KEYをセットしたらBuildKonfigの自動生成を行います
+```
+./gradlew generateBuildKonfig
+```

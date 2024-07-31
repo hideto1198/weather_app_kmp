@@ -21,6 +21,8 @@ ktor = "2.3.12"
 sqlDelight = "2.0.2"
 lifecycleViewmodelCompose = "2.8.4"
 material3 = "1.2.1"
+buildkonfig = "0.15.1"
+skie = "0.8.3"
 
 [libraries]
 android-driver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqlDelight" }
@@ -58,3 +60,5 @@ jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 sqldelight = { id = "app.cash.sqldelight", version.ref = "sqlDelight" }
+skie = { id = "co.touchlab.skie", version.ref = "skie" }
+buildkonfig = { id = "com.codingfeline.buildkonfig", version.ref = "buildkonfig"}
