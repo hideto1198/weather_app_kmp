@@ -22,8 +22,8 @@ class RocketLaunchViewModel(
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, launches = emptyList())
             try {
-                val lauches = sdk.getLaunches(forceReload = true)
-                _state.value = _state.value.copy(isLoading = false, launches = lauches)
+                val launches = sdk.getLaunches(forceReload = true)
+                _state.value = _state.value.copy(isLoading = false, launches = launches)
             } catch (e: Exception) {
                 _state.value = _state.value.copy(isLoading = false)
             }
