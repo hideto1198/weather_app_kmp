@@ -18,7 +18,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.pulltorefresh.PullToRefreshContainer
 import entity.RocketLaunch
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import org.weather_app_kmp.app.App.RocketLaunchViewModel
+import org.weather_app_kmp.app.RocketLaunch.RocketLaunchViewModel
 import org.koin.androidx.compose.koinViewModel
 import org.weather_app_kmp.app.theme.AppTheme
 import org.weather_app_kmp.app.theme.app_theme_successful

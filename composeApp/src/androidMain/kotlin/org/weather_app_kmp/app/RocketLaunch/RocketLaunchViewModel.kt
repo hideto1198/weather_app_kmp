@@ -1,6 +1,7 @@
-package org.weather_app_kmp.app.App
+package org.weather_app_kmp.app.RocketLaunch
 
 import SpaceXSDK
+import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -15,11 +16,11 @@ class RocketLaunchViewModel(
         loadLaunches()
     }
     private val _state = mutableStateOf(RocketLaunchScreenState())
-    val state = _state
+    val state: State<RocketLaunchScreenState> = _state
     
     fun loadLaunches() {
         viewModelScope.launch {
-            _state.value = _state.value.copy(isLoading = true)
+            _state.value = _state.value.copy(isLoading = true, launches = emptyList())
             try {
                 val lauches = sdk.getLaunches(forceReload = true)
                 _state.value = _state.value.copy(isLoading = false, launches = lauches)

@@ -2,7 +2,7 @@ import cahce.AndroidDatabaseDriverFactory
 import network.SpaceXApi
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
-import org.weather_app_kmp.app.App.RocketLaunchViewModel
+import org.weather_app_kmp.app.RocketLaunch.RocketLaunchViewModel
 
 val appModule = module {
     single<SpaceXApi> { SpaceXApi() }
